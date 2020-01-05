@@ -54,4 +54,4 @@ $embed = new Discord_RichEmbed( $content = "", $description = "" );
 
 | Methods | Description |
 |---------|-------------|
-| setTitle( string $title ) | Change the Embed title |
+| `setTitle( string $title );` | Change the Embed title |
