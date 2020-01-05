@@ -2,7 +2,7 @@
 PHP API to use with Discord (WebHooks, Messages and RichEmbeds) 
 
 ## Examples
-See examples [here](https://github.com/Guthen/DiscordPHP/examples).
+See examples [here](https://github.com/Guthen/DiscordPHP/tree/master/examples).
 
 ## Classes
 
