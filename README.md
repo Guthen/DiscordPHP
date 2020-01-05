@@ -41,3 +41,16 @@ $msg = new Discord_Message( $content = "" );
 | `setUsername( string $username );` | Change the Message username | 
 | `setAvatarURL( string $url );` | Change the Message avatar URL | 
 | `setTTS( bool $tts );` | Set whenever the TTS option is activated |
+
+### RichEmbed
+
+#### Construct
+
+```php
+$embed = new Discord_RichEmbed( $content = "", $description = "" )
+```
+
+#### Methods
+
+| Methods | Description |
+|---------|-------------|
