@@ -16,7 +16,7 @@ See examples [here](https://github.com/Guthen/DiscordPHP/tree/master/examples).
 
 #### Construct
 ```php
-$webhook = new Discord_Webhook( $url = "" );
+$webhook = new Discord_WebHook( $url = "" );
 ```
 
 #### Methods
@@ -47,10 +47,11 @@ $msg = new Discord_Message( $content = "" );
 #### Construct
 
 ```php
-$embed = new Discord_RichEmbed( $content = "", $description = "" )
+$embed = new Discord_RichEmbed( $content = "", $description = "" );
 ```
 
 #### Methods
 
 | Methods | Description |
 |---------|-------------|
+| setTitle( string $title ) | Change the Embed title |
