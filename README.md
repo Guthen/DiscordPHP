@@ -1,6 +1,12 @@
 # DiscordPHP
 PHP API to use with Discord (WebHooks, Messages and RichEmbeds) 
 
+## Require
+Before using the API, you need to include it in your code like this :
+```php
+require( "path/to/discord.api.php" );
+```
+
 ## Examples
 See examples [here](https://github.com/Guthen/DiscordPHP/tree/master/examples).
 
