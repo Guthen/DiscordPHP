@@ -1,11 +1,11 @@
 <?php
 
-class WebHook {
+class Discord_WebHook {
     public function __construct( $url ) {
         $this->setURL( $url );
     }
 
-    public $url;
+    private $url;
     public function setURL( $url ) {
         if ( !is_string( $url ) ) {
             echo "Bad URL type";

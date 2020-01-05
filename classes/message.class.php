@@ -1,6 +1,6 @@
 <?php
 
-class Message {
+class Discord_Message {
     public function __construct( $content = "My Content" ) {
         $this->setContent( $content );
     }

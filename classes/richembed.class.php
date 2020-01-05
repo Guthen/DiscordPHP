@@ -1,6 +1,6 @@
 <?php
 
-class RichEmbed extends Message {
+class Discord_RichEmbed extends Discord_Message {
     public $type = "rich";
 
     public function __construct( $content = "", $desc = "" ) {
