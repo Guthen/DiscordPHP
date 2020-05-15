@@ -10,7 +10,7 @@ class Discord_RichEmbed extends Discord_Message {
 
     public $title;
     public function setTitle( $title ) {
-        if ( !is_string( $content ) ) {
+        if ( !is_string( $title ) ) {
             echo "Bad title type";
             exit;
         }
