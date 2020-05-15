@@ -30,7 +30,7 @@ class Discord_RichEmbed extends Discord_Message {
 
     public $url;
     public function setURL( $url ) {
-        if ( !is_string( $content ) ) {
+        if ( !is_string( $url ) ) {
             echo "Bad URL type";
             exit;
         }
