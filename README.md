@@ -39,7 +39,7 @@ $msg = new Discord_Message( $content = "" );
 | `setUsername( string $username );` | Change the Message username | 
 | `setAvatarURL( string $url );` | Change the Message avatar URL | 
 | `setTTS( bool $tts );` | Set whenever the TTS option is activated |
-| `toArray();` | Return an array version of the embed |
+| `toArray();` | Return an array version of the message |
 | `toJSON();` | Return the JSON of the array from `toArray()` |
 
 ### RichEmbed
