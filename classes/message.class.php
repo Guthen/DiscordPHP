@@ -8,12 +8,10 @@ class Discord_Message {
     public $content;
     public function setContent( $content ) {
         if ( !is_string( $content ) ) {
-            echo "Bad content type";
-            exit;
+            throw new Exception( "Given content must be a string" );
         }
         if ( strlen( $content ) >= 1000 ) {
-            echo "Content must have less than 1000 letters";
-            exit;
+            throw new Exception( "Given content must have less than 1000 letters" );
         }
         
         $this->content = $content;
@@ -22,8 +20,7 @@ class Discord_Message {
     public $username;
     public function setUsername( $username ) {
         if ( !is_string( $username ) ) {
-            echo "Bad username type";
-            exit;
+            throw new Exception( "Given username must be a string" );
         }
         
         $this->username = $username;
@@ -32,8 +29,7 @@ class Discord_Message {
     public $avatar_url;
     public function setAvatarURL( $url ) {
         if ( !is_string( $url ) ) {
-            echo "Bad avatar URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
 
         $this->avatar_url = $url;
@@ -42,8 +38,7 @@ class Discord_Message {
     public $tts;
     public function setTTS( $tts ) {
         if ( !is_bool( $tts ) ) {
-            echo "Bad TTS type";
-            exit;
+            throw new Exception( "Given TTS must be a boolean" );
         }
 
         $this->tts = $tts;
