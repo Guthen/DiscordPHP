@@ -11,8 +11,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $title;
     public function setTitle( $title ) {
         if ( !is_string( $title ) ) {
-            echo "Bad title type";
-            exit;
+            throw new Exception( "Given title must be a string" );
         }
 
         $this->title = $title;
@@ -21,8 +20,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $desc;
     public function setDescription( $desc ) {
         if ( !is_string( $desc ) ) {
-            echo "Bad description type";
-            exit;
+            throw new Exception( "Given description must be a string" );
         }
 
         $this->description = $desc;
@@ -31,8 +29,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $url;
     public function setURL( $url ) {
         if ( !is_string( $url ) ) {
-            echo "Bad URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
 
         $this->url = $url;
@@ -41,8 +38,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $timestamp;
     public function setTimestamp( $timestamp = -1 ) {
         if ( !is_int( $timestamp ) ) {
-            echo "Bad timestamp type";
-            exit;
+            throw new Exception( "Given timestamp must be a integer" );
         }
 
         $this->timestamp = date( DATE_ISO8601, $timestamp == -1 ? mktime() : $timestamp );
@@ -51,8 +47,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $color;
     public function setColor( $color = "000000" ) {
         if ( !is_string( $color ) ) {
-            echo "Bad color type";
-            exit;
+            throw new Exception( "Given color must be a string" );
         }
 
         $this->color = hexdec( $color );
@@ -61,8 +56,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $footer;
     public function setFooter( $text = "Footer", $icon_url = "" ) {
         if ( !is_string( $text ) ) {
-            echo "Bad text type";
-            exit;
+           throw new Exception( "Given text must be a string" );
         }
 
         $this->footer = [
@@ -74,8 +68,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $image;
     public function setImage( $url, $width = 100, $height = 100 ) {
         if ( !is_string( $url ) ) {
-            echo "Bad URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
 
         $this->image = [
@@ -88,8 +81,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $thumbnail;
     public function setThumbnail( $url, $width = 100, $height = 100 ) {
         if ( !is_string( $url ) ) {
-            echo "Bad URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
 
         $this->thumbnail = [
@@ -102,8 +94,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $video;
     public function setVideo( $url, $width = 100, $height = 100 ) {
         if ( !is_string( $url ) ) {
-            echo "Bad URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
 
         $this->video = [
@@ -116,8 +107,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $provider;
     public function setProvider( $name = "Provider", $url = "" ) {
         if ( !is_string( $name ) ) {
-            echo "Bad name type";
-            exit;
+            throw new Exception( "Given name must be a string" );
         }
 
         $this->provider = [
@@ -129,8 +119,7 @@ class Discord_RichEmbed extends Discord_Message {
     public $author;
     public function setAuthor( $name, $url = "", $icon_url = "" ) {
         if ( !is_string( $name ) ) {
-            echo "Bad name type";
-            exit;
+            throw new Exception( "Given name must be a string" );
         }
 
         $this->author = [
@@ -143,12 +132,10 @@ class Discord_RichEmbed extends Discord_Message {
     public $fields = [];
     public function addField( $name = "Name", $value = "Value", $inline = false ) {
         if ( !is_string( $name ) ) {
-            echo "Bad name type";
-            exit;
+            throw new Exception( "Given name must be a string" );
         }
         if ( !is_string( $value ) ) {
-            echo "Bad value type";
-            exit;
+            throw new Exception( "Given value must be a string" );
         }
 
         array_push( $this->fields, [
