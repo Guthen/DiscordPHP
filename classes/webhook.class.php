@@ -8,13 +8,11 @@ class Discord_WebHook {
     private $url;
     public function setURL( $url ) {
         if ( !is_string( $url ) ) {
-            echo "Bad URL type";
-            exit;
+            throw new Exception( "Given URL must be a string" );
         }
         
         if ( !preg_match( "/^https:\/\/discordapp.com\/api\/webhooks\/\d+\/[\w-]+$/", $url ) ) {
-            echo "Bad URL";
-            exit;
+            throw new Exception( "Given URL doesn’t match with a valid Discord Webhook URL" );
         }
 
         $this->url = $url;
@@ -31,11 +29,8 @@ class Discord_WebHook {
 
         $response = curl_exec( $ch );
         if ( curl_error( $ch ) ) {
-            echo curl_error( $ch );
+            throw new Exception( curl_error( $ch ) );
         }
-        /* else {
-            echo "Sended!";
-        } */
         curl_close( $ch );
 
         return $response;
