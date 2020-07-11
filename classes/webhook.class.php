@@ -12,7 +12,7 @@ class Discord_WebHook {
             exit;
         }
         
-        if ( !preg_match( "/^https:\/\/discordapp.com\/api\/webhooks\/\d+\/\w+$/", $url ) ) {
+        if ( !preg_match( "/^https:\/\/discordapp.com\/api\/webhooks\/\d+\/[\w-]+$/", $url ) ) {
             echo "Bad URL";
             exit;
         }
