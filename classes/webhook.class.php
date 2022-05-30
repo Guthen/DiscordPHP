@@ -11,7 +11,7 @@ class Discord_WebHook {
             throw new Exception( "Given URL must be a string" );
         }
         
-        if ( !preg_match( "/^https:\/\/discordapp.com\/api\/webhooks\/\d+\/[\w-]+$/", $url ) ) {
+        if ( !preg_match( "/^https:\/\/discord.com\/api\/webhooks\/\d+\/[\w_-]+$/", $url ) and !preg_match( "/^https:\/\/discordapp.com\/api\/webhooks\/\d+\/[\w_-]+$/", $url ) ) {
             throw new Exception( "Given URL doesn’t match with a valid Discord Webhook URL" );
         }
 
